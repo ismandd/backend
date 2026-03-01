@@ -87,6 +87,8 @@ export default defineEventHandler(async event => {
       });
     });
 
+    if (upserts.length === 0) return [];
+
     const bookmarks = await prisma.$transaction(upserts);
 
     return bookmarks.map((bookmark: any) => ({

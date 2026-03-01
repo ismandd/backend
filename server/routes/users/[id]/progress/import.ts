@@ -153,6 +153,8 @@ export default defineEventHandler(async event => {
       })
     );
 
+    if (upsertPromises.length === 0) return { success: true, count: 0, items: [] };
+
     try {
       const transactionResults = await prisma.$transaction(upsertPromises);
 

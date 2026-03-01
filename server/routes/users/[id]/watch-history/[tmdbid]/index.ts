@@ -104,6 +104,8 @@ export default defineEventHandler(async event => {
         });
       });
 
+      if (upsertPromises.length === 0) return { success: true, count: 0, items: [] };
+
       const transactionResults = await prisma.$transaction(upsertPromises);
 
       const results = transactionResults.map(watchHistoryItem => ({
