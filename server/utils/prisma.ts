@@ -4,7 +4,7 @@ import { PrismaClient } from '../../generated/client';
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  max: parseInt(process.env.DB_POOL_MAX || '100000', 10),
+  max: parseInt(process.env.DB_POOL_MAX || '1000', 10),
   connectionTimeoutMillis: 10000,
   idleTimeoutMillis: 300000,
 });
