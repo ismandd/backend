@@ -8,11 +8,22 @@ const log = scopedLogger('user-settings');
 const userSettingsSchema = z.object({
   applicationTheme: z.string().nullable().optional(),
   customTheme: z.object({
-    id: z.string(),
-    name: z.string(),
-    primary: z.string(),
-    secondary: z.string(),
-    tertiary: z.string(),
+    primary: z.string().optional(),
+    secondary: z.string().optional(),
+    tertiary: z.string().optional(),
+    activeTheme: z.object({
+      primary: z.string(),
+      secondary: z.string(),
+      tertiary: z.string(),
+    }).optional(),
+    savedCustomThemes: z.array(z.object({
+      id: z.string(),
+      name: z.string(),
+      primary: z.string(),
+      secondary: z.string(),
+      tertiary: z.string(),
+    })).optional(),
+    hiddenDefaultThemes: z.array(z.string()).optional(),
   }).nullable().optional(),
   applicationLanguage: z.string().optional().default('en'),
   defaultSubtitleLanguage: z.string().nullable().optional(),
