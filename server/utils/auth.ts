@@ -51,7 +51,7 @@ export function useAuth() {
         expires_at: expiryDate,
       },
       create: {
-        id: randomUUID(),
+        id: uuidv7(),
         user,
         device,
         user_agent: userAgent,
