@@ -1,0 +1,17 @@
+name = "backend-v2"
+
+main = "./.output/server/index.mjs"
+workers_dev = true
+compatibility_date = "2025-03-05"
+
+node_compat = true
+
+[vars]
+DATABASE_URL = "postgresql://postgres:PdpJueLlcSWBCxmpCRMmlOMOQUezPIuR@postgres.railway.internal:5432/railway"     # Railway or Neon / any Postgres
+TMDB_API_KEY = "72b1057440b68e12b12c604509e8010c"
+TRAKT_CLIENT_ID = "b703c5e6ebec44dfb4f633ed3c7dd04046d4e5931918568984d45f144bd43afd"
+TRAKT_CLIENT_SECRET = "4265c6560de6347c76db6c0d4429809cc05b0aed6ab77db0522456bc517c7598"
+CRYPTO_SECRET = "V2I4P7qU1CGcIeTkenwQMDkJGVRMy6VSsss"
+CAPTCHA = "false"                         # or "true" to toggle
+CAPTCHA_CLIENT_KEY = "6LfO2ZcsAAAAAHg-szlwMdEDWmbmbJ-PVcjsdgRu"
+META_NAME = "flix"
