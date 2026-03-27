@@ -1,4 +1,4 @@
-name = "backend-v2"
+name = "backend"
 
 main = "./.output/server/index.mjs"
 workers_dev = true
